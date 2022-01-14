@@ -32,11 +32,14 @@ class WordAdapter(context: Activity, words: ArrayList<Word>) : ArrayAdapter<Word
         val itemImageView =
             listItemView.findViewById<ImageView>(R.id.item_image_view)
 
-        if(currentWord.imageResourceID != -1) {
-            itemImageView.setImageResource(currentWord.imageResourceID)
-            itemImageView.visibility = View.VISIBLE
-        } else {
-            itemImageView.visibility = View.GONE
+        when {
+            currentWord.imageResourceID != -1 -> {
+                itemImageView.setImageResource(currentWord.imageResourceID)
+                itemImageView.visibility = View.VISIBLE
+            }
+            else -> {
+                itemImageView.visibility = View.GONE
+            }
         }
 
 
