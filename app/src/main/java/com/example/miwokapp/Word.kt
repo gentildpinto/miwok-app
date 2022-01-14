@@ -1,17 +1,18 @@
 package com.example.miwokapp
 
 class Word {
-    public val defaultTranslation: String
-    public val miwokTranslation: String
-    public var imageResourceID: Int? = null
+    val defaultTranslation: String
+    val miwokTranslation: String
+    var imageResourceID: Int = -1
 
-    constructor(pDefaultTranslation: String, pMiwokTranslation: String) {
-        defaultTranslation = pDefaultTranslation
-        miwokTranslation = pMiwokTranslation
+    constructor(englishWord: String, miwokWord: String) {
+        defaultTranslation = englishWord
+        miwokTranslation = miwokWord
     }
-    constructor(pDefaultTranslation: String, pMiwokTranslation: String, pImageResourceID: Int?) {
-        defaultTranslation = pDefaultTranslation
-        miwokTranslation = pMiwokTranslation
-        imageResourceID = pImageResourceID
+
+    constructor(englishWord: String, miwokWord: String, resourceID: Int) {
+        defaultTranslation = englishWord
+        miwokTranslation = miwokWord
+        imageResourceID = resourceID
     }
 }
