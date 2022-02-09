@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -11,10 +12,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<TextView>(R.id.numbers).setOnClickListener(this)
-        findViewById<TextView>(R.id.family).setOnClickListener(this)
-        findViewById<TextView>(R.id.colors).setOnClickListener(this)
-        findViewById<TextView>(R.id.phrases).setOnClickListener(this)
+        findViewById<LinearLayout>(R.id.numbers).setOnClickListener(this)
+        findViewById<LinearLayout>(R.id.family).setOnClickListener(this)
+        findViewById<LinearLayout>(R.id.colors).setOnClickListener(this)
+        findViewById<LinearLayout>(R.id.phrases).setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
